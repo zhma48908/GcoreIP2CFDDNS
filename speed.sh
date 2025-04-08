@@ -118,7 +118,7 @@ download_CloudflareST() {
     # 发送 API 请求获取仓库信息（替换 <username> 和 <repo>）
     latest_version=$(curl -s https://api.github.com/repos/XIU2/CloudflareSpeedTest/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
     if [ -z "$latest_version" ]; then
-    	latest_version="v2.2.4"
+    	latest_version="v2.2.5"
     	echo "下载版本号: $latest_version"
     else
     	echo "最新版本号: $latest_version"
